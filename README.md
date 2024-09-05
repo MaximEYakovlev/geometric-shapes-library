@@ -36,7 +36,7 @@ import { Circle, Rectangle, Triangle } from '../path-to-geometric-shapes-library
 
 ## Usage
 
-Circle
+### Circle
 ```ts
 import { Circle } from '../path-to-geometric-shapes-library/dist/index';
 
@@ -49,7 +49,7 @@ console.log(`Radius: ${circle.getRadius()}`);
 circle.getDiameter().then(diameter => console.log(`Diameter: ${diameter}`));
 ```
 
-Rectangle
+### Rectangle
 ```ts
 import { Rectangle } from '../path-to-geometric-shapes-library/dist/index';
 
@@ -62,7 +62,7 @@ console.log(`Width: ${rectangle.getWidth()}`);
 console.log(`Height: ${rectangle.getHeight()}`);
 ```
 
-Triangle
+### Triangle
 ```ts
 import { Triangle } from '../path-to-geometric-shapes-library/dist/index';
 
@@ -75,8 +75,7 @@ console.log(`Sides: ${triangle.getSidesLength().join(', ')}`);
 ```
 
 ## API Documentation
-
-Circle
+### Circle
 Constructor
 ```ts
 new Circle(radius: number)
@@ -90,7 +89,7 @@ Methods
 * getRadius(): number: Returns the radius of the circle.
 * getDiameter(): Promise<number>: Calculates the diameter of the circle.
 
-Rectangle
+### Rectangle
 Constructor
 ```ts
 new Rectangle(width: number, height: number)
@@ -105,7 +104,7 @@ Methods
 * getWidth(): number: Returns the width of the rectangle.
 * getHeight(): number: Returns the height of the rectangle.
 
-Triangle
+### Triangle
 Constructor
 ```ts
 new Triangle(sideA: number, sideB: number, sideC: number)
