@@ -29,49 +29,184 @@ Build the Library
 npm run build
 ```
 
-Use the Library in Your Project
-```bash
-import { Circle, Rectangle, Triangle } from '../path-to-geometric-shapes-library/dist/index';
-```
-
 ## Usage
 
 ### Circle
 ```ts
-import { Circle } from '../path-to-geometric-shapes-library/dist/index';
+// Import necessary classes
+import { Circle } from './your_path';
+import { EventEmitter } from './your_path';
+import { Promisify } from './your_path';
+import Emitter from 'node:events';
 
-const circle = new Circle(5);
+// Create instances of EventEmitter and Promisify
+const eventEmitter = new EventEmitter(new Emitter());
+const promisify = new Promisify();
 
-circle.getArea().then(area => console.log(`Area: ${area}`));
-circle.getCircumference().then(circumference => console.log(`Circumference: ${circumference}`));
-console.log(`Name: ${circle.getName()}`);
-console.log(`Radius: ${circle.getRadius()}`);
-circle.getDiameter().then(diameter => console.log(`Diameter: ${diameter}`));
+// Create an instance of Circle
+const circle = new Circle(5, eventEmitter, promisify);
+
+// Register event listeners
+eventEmitter.on('before getArea', (data) => {
+    console.log(`Event: Before calculating area of ${data.shape}`);
+});
+
+eventEmitter.on('after getArea', (data) => {
+    console.log(`Event: After calculating area of ${data.shape}, Area: ${data.calculation}`);
+});
+
+eventEmitter.on('before getCircumference', (data) => {
+    console.log(`Event: Before calculating circumference of ${data.shape}`);
+});
+
+eventEmitter.on('after getCircumference', (data) => {
+    console.log(`Event: After calculating circumference of ${data.shape}, Circumference: ${data.calculation}`);
+});
+
+eventEmitter.on('before getDiameter', (data) => {
+    console.log(`Event: Before calculating diameter of ${data.shape}`);
+});
+
+eventEmitter.on('after getDiameter', (data) => {
+    console.log(`Event: After calculating diameter of ${data.shape}, Diameter: ${data.calculation}`);
+});
+
+// Function to demonstrate using the Circle class methods
+async function exampleUsage() {
+    try {
+        // Get the area of the circle
+        const area = await circle.getArea();
+        console.log(`Area: ${area}`);
+
+        // Get the circumference of the circle
+        const circumference = await circle.getCircumference();
+        console.log(`Circumference: ${circumference}`);
+
+        // Get the diameter of the circle
+        const diameter = await circle.getDiameter();
+        console.log(`Diameter: ${diameter}`);
+
+        // Get the name and radius of the circle
+        console.log(`Name: ${circle.getName()}`);
+        console.log(`Radius: ${circle.getRadius()}`);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Run the example usage function
+exampleUsage();
 ```
 
 ### Rectangle
 ```ts
-import { Rectangle } from '../path-to-geometric-shapes-library/dist/index';
+// Import necessary classes
+import { Rectangle } from './your_path';
+import { EventEmitter } from './your_path';
+import { Promisify } from './your_path';
+import Emitter from 'node:events';
 
-const rectangle = new Rectangle(10, 5);
+// Create instances of EventEmitter and Promisify
+const eventEmitter = new EventEmitter(new Emitter());
+const promisify = new Promisify();
 
-rectangle.getArea().then(area => console.log(`Area: ${area}`));
-rectangle.getPerimeter().then(perimeter => console.log(`Perimeter: ${perimeter}`));
-console.log(`Name: ${rectangle.getName()}`);
-console.log(`Width: ${rectangle.getWidth()}`);
-console.log(`Height: ${rectangle.getHeight()}`);
+// Create an instance of Rectangle
+const rectangle = new Rectangle(10, 5, eventEmitter, promisify);
+
+// Register event listeners
+eventEmitter.on('before getArea', (data) => {
+    console.log(`Event: Before calculating area of ${data.shape}`);
+});
+
+eventEmitter.on('after getArea', (data) => {
+    console.log(`Event: After calculating area of ${data.shape}, Area: ${data.calculation}`);
+});
+
+eventEmitter.on('before getPerimeter', (data) => {
+    console.log(`Event: Before calculating perimeter of ${data.shape}`);
+});
+
+eventEmitter.on('after getPerimeter', (data) => {
+    console.log(`Event: After calculating perimeter of ${data.shape}, Perimeter: ${data.calculation}`);
+});
+
+// Function to demonstrate using the Rectangle class methods
+async function exampleUsage() {
+    try {
+        // Get the area of the rectangle
+        const area = await rectangle.getArea();
+        console.log(`Area: ${area}`);
+
+        // Get the perimeter of the rectangle
+        const perimeter = await rectangle.getPerimeter();
+        console.log(`Perimeter: ${perimeter}`);
+
+        // Get the name, width, and height of the rectangle
+        console.log(`Name: ${rectangle.getName()}`);
+        console.log(`Width: ${rectangle.getWidth()}`);
+        console.log(`Height: ${rectangle.getHeight()}`);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Run the example usage function
+exampleUsage();
 ```
 
 ### Triangle
 ```ts
-import { Triangle } from '../path-to-geometric-shapes-library/dist/index';
+// Import necessary classes
+import { Triangle } from './your_path';
+import { EventEmitter } from './your_path';
+import { Promisify } from './your_path';
+import Emitter from 'node:events';
 
-const triangle = new Triangle(3, 4, 5);
+// Create instances of EventEmitter and Promisify
+const eventEmitter = new EventEmitter(new Emitter());
+const promisify = new Promisify();
 
-triangle.getArea().then(area => console.log(`Area: ${area}`));
-triangle.getPerimeter().then(perimeter => console.log(`Perimeter: ${perimeter}`));
-console.log(`Name: ${triangle.getName()}`);
-console.log(`Sides: ${triangle.getSidesLength().join(', ')}`);
+// Create an instance of Triangle
+const triangle = new Triangle(3, 4, 5, eventEmitter, promisify);
+
+// Register event listeners
+eventEmitter.on('before getArea', (data) => {
+    console.log(`Event: Before calculating area of ${data.shape}`);
+});
+
+eventEmitter.on('after getArea', (data) => {
+    console.log(`Event: After calculating area of ${data.shape}, Area: ${data.calculation}`);
+});
+
+eventEmitter.on('before getPerimeter', (data) => {
+    console.log(`Event: Before calculating perimeter of ${data.shape}`);
+});
+
+eventEmitter.on('after getPerimeter', (data) => {
+    console.log(`Event: After calculating perimeter of ${data.shape}, Perimeter: ${data.calculation}`);
+});
+
+// Function to demonstrate using the Triangle class methods
+async function exampleUsage() {
+    try {
+        // Get the area of the triangle
+        const area = await triangle.getArea();
+        console.log(`Area: ${area}`);
+
+        // Get the perimeter of the triangle
+        const perimeter = await triangle.getPerimeter();
+        console.log(`Perimeter: ${perimeter}`);
+
+        // Get the name and sides of the triangle
+        console.log(`Name: ${triangle.getName()}`);
+        console.log(`Sides: ${triangle.getSidesLength().join(', ')}`);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+// Run the example usage function
+exampleUsage();
 ```
 
 ## API Documentation
