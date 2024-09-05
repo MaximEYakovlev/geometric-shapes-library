@@ -216,6 +216,8 @@ Constructor
 new Circle(radius: number, eventEmitter, promisify)
 ```
 * radius: The radius of the circle.
+* eventEmitter: Instance of the class 'EventEmitter'.
+* promisify: Instance of the class 'Promisify'.
 
 Methods
 * getArea(): Promise<number>: Calculates the area of the circle.
@@ -231,6 +233,8 @@ new Rectangle(width: number, height: number, eventEmitter, promisify)
 ```
 * width: The width of the rectangle.
 * height: The height of the rectangle.
+* eventEmitter: Instance of the class 'EventEmitter'.
+* promisify: Instance of the class 'Promisify'.
 
 Methods
 * getArea(): Promise<number>: Calculates the area of the rectangle.
@@ -247,6 +251,8 @@ new Triangle(sideA: number, sideB: number, sideC: number, eventEmitter, promisif
 * sideA: The length of the first side.
 * sideB: The length of the second side.
 * sideC: The length of the third side.
+* eventEmitter: Instance of the class 'EventEmitter'.
+* promisify: Instance of the class 'Promisify'.
 
 Methods
 * getArea(): Promise<number>: Calculates the area of the triangle using Heron's formula.
