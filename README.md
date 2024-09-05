@@ -213,7 +213,7 @@ exampleUsage();
 ### Circle
 Constructor
 ```ts
-new Circle(radius: number)
+new Circle(radius: number, eventEmitter, promisify)
 ```
 * radius: The radius of the circle.
 
@@ -227,7 +227,7 @@ Methods
 ### Rectangle
 Constructor
 ```ts
-new Rectangle(width: number, height: number)
+new Rectangle(width: number, height: number, eventEmitter, promisify)
 ```
 * width: The width of the rectangle.
 * height: The height of the rectangle.
@@ -242,7 +242,7 @@ Methods
 ### Triangle
 Constructor
 ```ts
-new Triangle(sideA: number, sideB: number, sideC: number)
+new Triangle(sideA: number, sideB: number, sideC: number, eventEmitter, promisify)
 ```
 * sideA: The length of the first side.
 * sideB: The length of the second side.
