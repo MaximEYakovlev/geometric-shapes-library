@@ -29,6 +29,11 @@ Build the Library
 npm run build
 ```
 
+Test
+```bash
+npm test
+```
+
 ## Usage
 
 ### Circle

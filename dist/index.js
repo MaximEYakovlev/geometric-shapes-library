@@ -14,6 +14,8 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./utils/events/EventEmitter"), exports);
+__exportStar(require("./utils/promisify/Promisify"), exports);
 __exportStar(require("./shapes/circle/Circle"), exports);
 __exportStar(require("./shapes/rectangle/Rectangle"), exports);
 __exportStar(require("./shapes/triangle/Triangle"), exports);
