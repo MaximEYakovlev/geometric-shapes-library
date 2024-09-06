@@ -1,6 +1,7 @@
 > [!NOTE]
 > **Used software versions:**
 > - Node.js: v20.10.0
+> - npm: 10.2.3
 
 # Geometric Shapes Library
 
